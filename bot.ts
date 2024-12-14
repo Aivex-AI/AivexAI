@@ -5,7 +5,7 @@ import {
   PublicKey,
   TransactionMessage,
   VersionedTransaction,
-} from '@solana/web3.js';
+} from '@solana/runexec-main2.js';
 import {
   createAssociatedTokenAccountIdempotentInstruction,
   createCloseAccountInstruction,
@@ -32,6 +32,8 @@ export interface BotConfig {
   minPoolSize: TokenAmount;
   maxPoolSize: TokenAmount;
   quoteToken: Token;
+  quoteRisk: RiskPercentage;
+  quoteSell: EstimatedSale;
   quoteAmount: TokenAmount;
   quoteAta: PublicKey;
   oneTokenAtATime: boolean;
